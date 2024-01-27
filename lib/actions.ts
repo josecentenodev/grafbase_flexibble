@@ -59,7 +59,7 @@ const makeGraphQLRequest = async (query: string, variables = {}) => {
 
 export const fetchAllProjects = (
   category?: string | null,
-  endcursor?: string | null
+  endCursor?: string | null
 ) => {
   client.setHeader("x-api-key", apiKey);
 
@@ -67,9 +67,9 @@ export const fetchAllProjects = (
   const variables = category
     ? {
         category,
-        endcursor,
+        endCursor,
       }
-    : { endcursor };
+    : { endCursor };
 
   // Hacer la solicitud GraphQL utilizando la consulta "projectsQuery" y las "variables"
   return category
